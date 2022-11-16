@@ -72,6 +72,7 @@ hr {
 @media (max-width: 768px) {
   body {
     background-color: #4d4d4d;
+    padding-bottom: 20px;
   }
 
   .timer__container {
