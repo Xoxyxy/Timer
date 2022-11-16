@@ -19,13 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const addNull = value => value < 10 ? `0${value}` : value
 
   const timeCount = () => {
-    let nowDate = new Date()
-    let timerLeft = newYear - nowDate
+    let nowDate = new Date(),
+      timerLeft = newYear - nowDate,
+      days, hours, min, sec
 
-    let days = Math.floor(timerLeft / 1000 / 60 / 60 / 24),
-      hours = Math.floor((timerLeft / 1000 / 60 / 60) % 24),
-      min = Math.floor((timerLeft / 1000 / 60) % 60),
+    if (timerLeft <= 0) {
+      days = 0
+      hours = 0
+      min = 0
+      sec = 0
+    } else {
+      days = Math.floor(timerLeft / 1000 / 60 / 60 / 24)
+      hours = Math.floor((timerLeft / 1000 / 60 / 60) % 24)
+      min = Math.floor((timerLeft / 1000 / 60) % 60)
       sec = Math.floor((timerLeft / 1000) % 60)
+    }
 
     daysNumb.innerHTML = addNull(days)
     hoursNumb.innerHTML = addNull(hours)
