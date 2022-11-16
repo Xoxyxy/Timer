@@ -87,6 +87,10 @@ hr {
     margin-bottom: 20px;
   }
 
+  .timer__numb {
+    margin-bottom: 0;
+  }
+
   hr {
     display: none;
   }
